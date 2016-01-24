@@ -1,9 +1,3 @@
-#download files
-temp <- tempfile()
-download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",temp)
-raw <- unz(temp, "household_power_consumption.txt"))
-unlink(temp)
-
 #get colClasses
 initial<-read.table(file='household_power_consumption.txt', nrows=100, header=TRUE, sep=';')
 classes <- sapply(initial, class)
